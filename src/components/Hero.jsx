@@ -2,9 +2,44 @@ import { useState, useEffect, useRef } from 'react'
 import profileImg from '../assets/profile.png'
 import ScrollingImages from './ScrollingImages'
 
+// Custom typewriter hook
+const useTypewriter = (texts, speed = 100, deleteSpeed = 50, pauseDuration = 2000) => {
+  const [displayText, setDisplayText] = useState('')
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    const currentText = texts[currentIndex]
+    let timeout
+
+    if (!isDeleting && displayText === currentText) {
+      // Pause before deleting
+      timeout = setTimeout(() => setIsDeleting(true), pauseDuration)
+    } else if (isDeleting && displayText === '') {
+      // Move to next text
+      setIsDeleting(false)
+      setCurrentIndex((prev) => (prev + 1) % texts.length)
+    } else {
+      // Type or delete one character
+      const shouldDelete = isDeleting
+      timeout = setTimeout(() => {
+        setDisplayText(currentText.substring(0, displayText.length + (shouldDelete ? -1 : 1)))
+      }, shouldDelete ? deleteSpeed : speed)
+    }
+
+    return () => clearTimeout(timeout)
+  }, [displayText, currentIndex, isDeleting, texts, speed, deleteSpeed, pauseDuration])
+
+  return displayText
+}
+
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const sectionRef = useRef(null)
+  
+  // Typewriter effect for roles
+  const roles = ['Frontend Developer', 'React Developer', 'Next.js Developer']
+  const typewriterText = useTypewriter(roles, 100, 50, 2000)
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -79,8 +114,8 @@ const Hero = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
-                Hey! I'm <span className="text-yellow-500">Suleman Shakeel</span>,<br />
-                a <span className="text-white">|Developer.</span>
+                Hey! I'm <span className="text-yellow-500">Sohaib Shakeel</span>,<br />
+                a <span className="text-white">{typewriterText}<span className="animate-pulse">|</span></span>
             </h1>
             
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
