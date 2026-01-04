@@ -188,7 +188,7 @@ function ScrollingImages() {
                     className="font-bold"
                     style={{ color: themeColors.primaryColor }}
                   >
-                     Suleman
+                     Sohaib
                   </span>{" "}
                   — a Frontend Developer.
                 </p>
@@ -206,7 +206,7 @@ function ScrollingImages() {
           {/* image wraper */}
           <div className="w-full h-full relative">
             <img
-              alt="Suleman - Frontend Developer"
+              alt="Sohaib - Frontend Developer"
               src={slide.image}
               className="absolute top-[58%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
               style={{
