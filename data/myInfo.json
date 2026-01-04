@@ -49,42 +49,49 @@
       "name": "Docker",
       "src": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/docker/docker.png",
       "size": "large",
-      "angle": 51,
+      "angle": 45,
       "tooltipColor": "#2496ED"
     },
     {
       "name": "Axios",
       "src": "https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/axios/axios-plain.svg",
       "size": "large",
-      "angle": 102,
+      "angle": 90,
       "tooltipColor": "#5A29E4"
     },
     {
       "name": "TanStack Query",
       "src": "https://raw.githubusercontent.com/TanStack/query/main/media/emblem-light.svg",
       "size": "large",
-      "angle": 153,
+      "angle": 135,
       "tooltipColor": "#FF4154"
     },
     {
       "name": "Material UI",
       "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
       "size": "large",
-      "angle": 204,
+      "angle": 180,
       "tooltipColor": "#0081CB"
     },
     {
-      "name": "AI",
-      "src": "https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/illustrator/illustrator-plain.svg",
+      "name": "Figma",
+      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
       "size": "large",
-      "angle": 255,
-      "tooltipColor": "#FF9A00"
+      "angle": 225,
+      "tooltipColor": "#F24E1E"
+    },
+    {
+      "name": "Social",
+      "src": "https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/slack/slack-original.svg",
+      "size": "large",
+      "angle": 270,
+      "tooltipColor": "#4A154B"
     },
     {
       "name": "Next.js",
       "src": "https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/nextjs/nextjs-original.svg",
       "size": "large",
-      "angle": 306,
+      "angle": 315,
       "tooltipColor": "#000000"
     },
     {
@@ -98,14 +105,21 @@
       "name": "CSS",
       "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       "size": "small",
-      "angle": 60,
+      "angle": 45,
       "tooltipColor": "#1572B6"
+    },
+    {
+      "name": "Sass",
+      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+      "size": "small",
+      "angle": 90,
+      "tooltipColor": "#CC6699"
     },
     {
       "name": "JavaScript",
       "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
       "size": "small",
-      "angle": 120,
+      "angle": 135,
       "tooltipColor": "#F7DF1E"
     },
     {
@@ -119,15 +133,22 @@
       "name": "Tailwind CSS",
       "src": "https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/tailwindcss/tailwindcss-original.svg",
       "size": "small",
-      "angle": 240,
+      "angle": 225,
       "tooltipColor": "#38B2AC"
     },
     {
       "name": "TypeScript",
       "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
       "size": "small",
-      "angle": 300,
+      "angle": 270,
       "tooltipColor": "#3178C6"
+    },
+    {
+      "name": "Git",
+      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+      "size": "small",
+      "angle": 315,
+      "tooltipColor": "#F05032"
     }
   ]
 }

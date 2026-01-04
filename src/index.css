@@ -49,11 +49,11 @@ html {
 
 @keyframes orbit-rotate {
   from {
-    transform: rotate(0deg) translateX(var(--current-radius)) rotate(0deg);
+    transform: rotate(var(--current-angle)) translateX(var(--current-radius)) rotate(calc(-1 * var(--current-angle)));
   }
 
   to {
-    transform: rotate(360deg) translateX(var(--current-radius)) rotate(-360deg);
+    transform: rotate(calc(var(--current-angle) + 360deg)) translateX(var(--current-radius)) rotate(calc(-1 * (var(--current-angle) + 360deg)));
   }
 }
 

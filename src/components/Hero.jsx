@@ -110,7 +110,7 @@ const Hero = () => {
         {/* Left Content */}
         <div className="flex-1 max-w-2xl">
             <div className="inline-block px-4 py-2 rounded-full border border-yellow-500/30 bg-yellow-500/10 mb-6">
-                <span className="text-yellow-400 font-mono tracking-wide">&lt; &gt; Full Stack Developer &lt;/&gt;</span>
+                <span className="text-yellow-400 font-mono tracking-wide">&lt; &gt; Frontend Developer &lt;/&gt;</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
