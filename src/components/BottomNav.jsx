@@ -82,28 +82,55 @@ const BottomNav = ({ activeSection, setActiveSection }) => {
   }, [])
 
   return (
-    <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 w-[600px] max-w-4xl px-4">
-      <div 
-        className="bg-[#1a1a1a] border-2 border-yellow-500 rounded-2xl shadow-lg"
+    <nav 
+      className="
+        fixed bottom-2 left-1/2 transform -translate-x-1/2 z-50
+        w-full max-w-4xl px-2
+        sm:bottom-4
+        sm:px-4 
+        md:w-[90vw]
+        lg:w-[600px]
+        "
+    >
+      <div
+        className="
+          bg-[#1a1a1a] border-2 border-yellow-500 rounded-2xl shadow-lg
+        "
         style={{
           boxShadow: '0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.3), 0 0 60px rgba(255, 215, 0, 0.1)'
         }}
       >
-        <div className="flex justify-around  items-center py-3 px-2">
+        <div
+          className="
+            flex justify-around items-center py-2 px-1
+            sm:py-3 sm:px-2
+          "
+        >
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
-              className={`flex flex-col items-center justify-center gap-1 px-4 py-2 rounded-xl transition-all min-w-[60px] ${
-                activeSection === item.id
+              className={`
+                flex flex-col items-center justify-center gap-0.5
+                min-w-[48px] px-2 py-2
+                rounded-xl transition-all
+                text-xs font-semibold
+                sm:min-w-[60px] sm:px-4 gap-1
+                ${activeSection === item.id
                   ? 'bg-yellow-400 text-black'
                   : 'text-white hover:bg-yellow-400/10'
-              }`}
+                }
+              `}
             >
               <div className={activeSection === item.id ? 'text-black' : 'text-yellow-400'}>
                 {getIcon(item.icon)}
               </div>
-              <span className={`text-xs font-semibold ${activeSection === item.id ? 'text-black' : 'text-white'}`}>
+              <span
+                className={`
+                  text-[10px] sm:text-xs font-semibold mt-0.5
+                  ${activeSection === item.id ? 'text-black' : 'text-white'}
+                `}
+              >
                 {item.label}
               </span>
             </button>
