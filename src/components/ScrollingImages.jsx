@@ -177,7 +177,6 @@ function ScrollingImages() {
                     }, 0.3)`,
                   }}
                 >
-                  👋
                 </div>
                 <p
                   className="text-base leading-snug tracking-tight"
