@@ -86,3 +86,24 @@ html {
   border-right: 5px solid transparent;
   border-top: 5px solid;
 }
+
+@keyframes id-card-swing-final {
+  0% {
+    transform: rotate(10deg) translate(6px, 0px) skew(-2deg);
+  }
+
+  50% {
+    transform: rotate(-10deg) translate(-6px, 0px) skew(2deg);
+  }
+
+  100% {
+    transform: rotate(10deg) translate(6px, 0px) skew(-2deg);
+  }
+}
+
+.animate-physics-final {
+  transform-origin: 50% -20px;
+  animation: id-card-swing-final 4s ease-in-out infinite;
+  will-change: transform;
+  transform-style: preserve-3d;
+}

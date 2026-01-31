@@ -1,141 +1,95 @@
-import { useState, useEffect } from 'react'
-import { FaLightbulb, FaHandshake, FaBullseye, FaStar, FaCheckCircle } from 'react-icons/fa'
+import { FaDownload } from 'react-icons/fa'
 import profileImg from '../assets/profile-new.png'
 
 const About = () => {
-  const [localTime, setLocalTime] = useState('')
-
-  useEffect(() => {
-    const updateTime = () => {
-      // Lahore, Pakistan timezone (Asia/Karachi)
-      const now = new Date()
-      const options = { 
-        timeZone: 'Asia/Karachi',
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
-      }
-      const timeString = now.toLocaleTimeString('en-US', options)
-      // Format: "2:05 PM" -> "2:05 pm"
-      const formatted = timeString.toLowerCase().replace(/\s+(am|pm)/, ' $1')
-      setLocalTime(formatted)
-    }
-
-    updateTime()
-    const interval = setInterval(updateTime, 60000) // Update every minute
-
-    return () => clearInterval(interval)
-  }, [])
-
-  const features = [
-    { icon: FaLightbulb, label: 'Innovation', color: 'text-yellow-400' },
-    { icon: FaHandshake, label: 'Collaboration', color: 'text-yellow-400' },
-    { icon: FaBullseye, label: 'Precision', color: 'text-yellow-400' },
-    { icon: FaStar, label: 'Impact', color: 'text-yellow-400' }
-  ]
+  const handleDownloadCV = () => {
+    // Placeholder for CV download functionality
+    // You can add actual CV file link here
+    window.open('#', '_blank')
+  }
 
   return (
     <section id="about" className="py-20 md:py-32 px-4 bg-[#0a0a0a] relative overflow-hidden">
-      {/* Subtle background glow */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-yellow-400/20 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
-          {/* Profile Card - Left Side */}
-          <div className="lg:w-2/5 w-full flex justify-center lg:justify-start">
-            <div className="relative group">
-              {/* Yellow Glow Effect - More prominent */}
-              <div className="absolute -inset-1 bg-yellow-400 rounded-2xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
-              
-              {/* Main Card */}
-              <div className="relative bg-[#1a1a1a] border-2 border-yellow-400 rounded-2xl p-6 shadow-[0_0_40px_rgba(255,215,0,0.5)] max-w-sm w-full backdrop-blur-sm">
-                <div className="flex items-start gap-4">
-                  {/* Profile Picture */}
-                  <div className="relative flex-shrink-0">
-                    <div className="absolute -inset-1 bg-yellow-400 rounded-full blur-md opacity-50"></div>
-                    <img 
-                      src={profileImg} 
-                      alt="Saadullah S." 
-                      className="relative w-16 h-16 rounded-full border-2 border-yellow-400 object-cover ring-2 ring-yellow-400/30"
-                    />
+      <div className="container mx-auto max-w-6xl relative z-10">
+        {/* Main Card Container */}
+        <div className="bg-[#1a0f08] rounded-2xl border-2 border-yellow-500/30 p-8 md:p-12 shadow-2xl">
+          <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
+            {/* Left Column - Profile Image with Hanging Effect */}
+            <div className="w-full lg:w-2/5 flex justify-center lg:justify-start">
+              <div className="relative animate-physics-final">
+                {/* Hook/Clip at top */}
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
+                    <div className="w-4 h-4 bg-gray-600 rounded-full"></div>
                   </div>
-
-                  {/* Name and Info */}
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h3 className="text-white text-xl font-bold">Saadullah S.</h3>
-                      <FaCheckCircle className="text-blue-500 flex-shrink-0 text-sm" />
-                    </div>
-                    <p className="text-gray-400 text-sm mb-3">
-                      Lahore, Pakistan - {localTime || '2:05 pm'} local time
-                    </p>
-
-                    {/* Green Badges */}
-                    <div className="flex flex-wrap gap-2">
-                      <span className="inline-block bg-green-500 text-white text-xs font-medium px-3 py-1.5 rounded-full whitespace-nowrap">
-                        Available for work
-                      </span>
-                      <span className="inline-block bg-green-500 text-white text-xs font-medium px-3 py-1.5 rounded-full whitespace-nowrap">
-                        Hiring Talent
-                      </span>
-                    </div>
-                  </div>
+                  {/* Chain/String */}
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0.5 h-12 bg-gray-600"></div>
+                </div>
+                
+                {/* Profile Image */}
+                <div className="relative mt-16">
+                  <img 
+                    src={profileImg} 
+                    alt="Profile" 
+                    className="w-[400px] max-w-[380px] rounded-2xl object-cover shadow-2xl"
+                    style={{ filter: 'grayscale(100%) contrast(1.1)' }}
+                    onError={(e) => {
+                      e.target.src = `https://via.placeholder.com/400x500/1a0f08/EAB308?text=Profile`
+                    }}
+                  />
                 </div>
               </div>
             </div>
-          </div>
-          
-          {/* Content - Right Side */}
-          <div className="lg:w-3/5 w-full space-y-6 lg:space-y-8">
-            {/* ABOUT ME Badge - Centered at top */}
-            <div className="flex justify-center">
-              <div
-                className="inline-block px-8 py-1.5 bg-black/60 border border-yellow-500 rounded-full text-yellow-400 text-base font-semibold uppercase tracking-wider shadow-[0_0_32px_1px_rgba(255,215,0,0.08)]"
-                style={{
-                  boxShadow: "0 0 30px 1px #ffe06622 inset"
-                }}
-              >
-                ABOUT ME
+
+            {/* Right Column - Content */}
+            <div className="w-full lg:w-3/5 space-y-6">
+              {/* Heading */}
+              <h2 className="text-4xl md:text-5xl font-bold text-white">
+                About me
+              </h2>
+
+              {/* Tagline with vertical accent */}
+              <div className="flex items-center gap-3">
+                <div className="w-1 h-6 bg-yellow-500"></div>
+                <p className="text-gray-300 text-base md:text-lg">
+                  A blend of code logic and design aesthetics.
+                </p>
               </div>
-            </div>
-            
-            {/* Heading */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-center lg:text-left">
-              <span className="block text-white">Innovate with Intelligence,</span>
-              <span className="block text-yellow-400 mt-2">Build with Purpose</span>
-            </h2>
-            
-            {/* Description */}
-            <div className="text-white text-base md:text-lg leading-relaxed space-y-4 lg:space-y-5">
-              <p>
-                I'm <strong className="text-white font-bold">Saadullah Bin Saleem</strong>, an AI Engineer and Backend Developer passionate about creating intelligent systems and automation solutions that drive real business value.
-              </p>
-              <p>
-                I specialize in <strong className="text-yellow-400 font-bold">Agentic AI, Gen AI tools</strong>, and backend architectures using <strong className="text-yellow-400 font-bold">Python, Django, and FastAPI</strong>. My focus is on building smart, scalable solutions that automate workflows, power voice agents, and enhance real-world efficiency.
-              </p>
-              <p>
-                Driven by curiosity and creativity, I transform complex ideas into seamless, high-impact AI systems that help businesses scale and succeed.
-              </p>
-            </div>
-            
-            {/* Feature Boxes - Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 lg:mt-8">
-              {features.map((feature, idx) => {
-                const IconComponent = feature.icon
-                return (
-                  <div 
-                    key={idx}
-                    className="bg-[#1a1a1a] border border-gray-800 rounded-lg p-6 text-center hover:border-yellow-400/50 transition-all duration-300"
-                  >
-                    <div className={`${feature.color} text-4xl mb-3 flex justify-center`}>
-                      <IconComponent />
-                    </div>
-                    <p className="text-white font-semibold text-sm">{feature.label}</p>
-                  </div>
-                )
-              })}
+
+              {/* Paragraphs */}
+              <div className="space-y-4 text-gray-300 text-base md:text-lg leading-relaxed">
+                <p>
+                  I'm <strong className="text-yellow-500">Saadullah Bin Saleem</strong>, an AI Engineer and Backend Developer passionate about creating intelligent systems and automation solutions. My journey in tech started with curiosity and self-learning, and I've built a philosophy around coding that emphasizes clean architecture, scalability, and real-world impact.
+                </p>
+                <p>
+                  I specialize in <strong className="text-yellow-500">Agentic AI, Gen AI tools</strong>, and backend architectures using <strong className="text-yellow-500">Python, Django, and FastAPI</strong>. Currently focused on building smart, scalable solutions that automate workflows, power voice agents, and enhance real-world efficiency. My key strengths include problem-solving, continuous learning, and delivering production-ready solutions.
+                </p>
+              </div>
+
+              {/* Statistics Section */}
+              <div className="flex flex-wrap gap-8 md:gap-12 pt-4">
+                <div className="flex flex-col">
+                  <span className="text-4xl md:text-5xl font-bold text-yellow-500">3+</span>
+                  <span className="text-sm text-gray-400 uppercase tracking-wide mt-1">Years of Experience</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-4xl md:text-5xl font-bold text-yellow-500">20+</span>
+                  <span className="text-sm text-gray-400 uppercase tracking-wide mt-1">Project Completed</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-4xl md:text-5xl font-bold text-yellow-500">10+</span>
+                  <span className="text-sm text-gray-400 uppercase tracking-wide mt-1">Satisfied Clients</span>
+                </div>
+              </div>
+
+              {/* Download CV Button */}
+              <button
+                onClick={handleDownloadCV}
+                className="mt-8 bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl hover:shadow-yellow-500/30 transform hover:-translate-y-0.5"
+              >
+                <span>Download CV</span>
+                <FaDownload className="text-sm" />
+              </button>
             </div>
           </div>
         </div>
