@@ -36,12 +36,11 @@ const Process = () => {
     <section id="process" className="py-20 px-4 bg-[#0a0a0a]">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <div className="inline-block px-4 py-2 border border-yellow-500 text-white rounded-full text-sm font-semibold mb-4">
-            HOW I WORK
+          <div className="text-4xl md:text-6xl font-bold mb-4">
+            HOW I
+            <span  className="text-yellow-500" > WORK</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-4">
-            A Streamlined Process, <span className="text-yellow-400">Built for Results</span>
-          </h2>
+         
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-6">
