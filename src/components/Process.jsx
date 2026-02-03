@@ -2,33 +2,33 @@ const Process = () => {
   const steps = [
     {
       number: '01',
-      title: 'Strategize',
-      description: 'Understand your vision, define goals, and craft a roadmap for success.'
+      title: 'Discovery',
+      description: 'Deeply understand your needs, context, and user requirements through research and collaboration.',
     },
     {
       number: '02',
-      title: 'Design',
-      description: 'Create intuitive architectures and user experiences that delight.'
+      title: 'Strategy',
+      description: 'Define clear goals, priorities, and a results-driven roadmap tailored to your vision.',
     },
     {
       number: '03',
-      title: 'Develop',
-      description: 'Build robust, scalable solutions with modern technologies.'
+      title: 'Design',
+      description: 'Craft intuitive user experiences and elegant interfaces that align with both function and brand.',
     },
     {
       number: '04',
-      title: 'Test',
-      description: 'Ensure quality, performance, and reliability at every level.'
+      title: 'Develop',
+      description: 'Build secure, scalable, and maintainable solutions using proven modern technologies.',
     },
     {
       number: '05',
-      title: 'Launch',
-      description: 'Deploy seamlessly and optimize for peak performance.'
+      title: 'Test & Refine',
+      description: 'Validate through rigorous testing, feedback cycles, and continuous improvements.',
     },
     {
       number: '06',
-      title: 'Scale',
-      description: 'Iterate, improve, and expand with confidence and agility.'
+      title: 'Deploy & Support',
+      description: 'Launch confidently, monitor success, and provide ongoing support for growth.',
     }
   ]
 
@@ -38,13 +38,12 @@ const Process = () => {
         <div className="text-center mb-12">
           <div className="text-4xl md:text-6xl font-bold mb-4">
             HOW I
-            <span  className="text-yellow-500" > WORK</span>
+            <span className="text-yellow-500"> WORK</span>
           </div>
-         
         </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-6">
-          {steps.slice(0, 5).map((step, idx) => (
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-6">
+          {steps.map((step, idx) => (
             <div key={idx} className="text-center">
               <div className="w-16 h-16 rounded-full border-2 border-yellow-500 bg-blue-900/30 flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-lg">{step.number}</span>
@@ -54,21 +53,10 @@ const Process = () => {
             </div>
           ))}
         </div>
-        
-        <div className="flex justify-center">
-          <div className="text-center max-w-xs">
-            <div className="w-16 h-16 rounded-full border-2 border-yellow-500 bg-blue-900/30 flex items-center justify-center mx-auto mb-4">
-              <span className="text-white font-bold text-lg">{steps[5].number}</span>
-            </div>
-            <h3 className="text-white font-semibold mb-2">{steps[5].title}</h3>
-            <p className="text-yellow-400 text-sm">{steps[5].description}</p>
-          </div>
-        </div>
       </div>
     </section>
   )
 }
 
 export default Process
-
 

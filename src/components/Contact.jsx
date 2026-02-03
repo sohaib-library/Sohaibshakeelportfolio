@@ -1,32 +1,26 @@
-import { FaEnvelope, FaPhone, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
+import { useState } from 'react'
 
 const Contact = () => {
-  const contactMethods = [
-    {
-      icon: FaEnvelope,
-      label: 'Email',
-      value: 'saadullahsaleem7@gmail.com',
-      link: 'mailto:saadullahsaleem7@gmail.com'
-    },
-    {
-      icon: FaPhone,
-      label: 'Phone',
-      value: '+92 310 4321784',
-      link: 'tel:+923104321784'
-    },
-    {
-      icon: FaLinkedin,
-      label: 'LinkedIn',
-      value: 'Connect on LinkedIn',
-      link: '#'
-    },
-    {
-      icon: FaWhatsapp,
-      label: 'WhatsApp',
-      value: 'Chat on Whatsapp',
-      link: '#'
-    }
-  ]
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  })
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // Handle form submission here
+    console.log('Form submitted:', formData)
+  }
 
   return (
     <section id="contact" className="py-20 px-4 bg-[#0a0a0a]">
@@ -40,51 +34,141 @@ const Contact = () => {
           </h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {contactMethods.map((method, idx) => {
-            const IconComponent = method.icon
-            return (
-              <a
-                key={idx}
-                href={method.link}
-                className="group relative bg-[#1a1a1a] border border-gray-800 rounded-lg p-6 text-center hover:border-yellow-500 transition-all transform hover:-translate-y-1 hover:shadow-lg hover:shadow-yellow-500/10"
-              >
-                <div className="text-yellow-400 text-4xl mb-4 flex justify-center">
-                  <IconComponent className="transform group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">{method.label}</h3>
-                <p className="text-gray-400 text-sm">{method.value}</p>
-              </a>
-            )
-          })}
-        </div>
-        
-        {/* Footer */}
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left Side - Contact Info */}
+          <div className="space-y-8">
             <div>
-              <div className="text-yellow-400 text-2xl font-bold mb-2">SS</div>
-              <p className="text-gray-400">Building intelligent systems that drive results.</p>
+              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+              <p className="text-gray-400 mb-8">
+                Ready to start your next project? Let's discuss how we can bring your ideas to life.
+                I'm always excited to work on innovative solutions.
+              </p>
             </div>
-            <div className="flex flex-col md:flex-row gap-8">
-              <div>
-                <h4 className="text-yellow-400 font-semibold mb-3">Quick Links</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><a href="#home" className="hover:text-yellow-400 transition">Home</a></li>
-                  <li><a href="#about" className="hover:text-yellow-400 transition">About</a></li>
-                  <li><a href="#services" className="hover:text-yellow-400 transition">Services</a></li>
-                  <li><a href="#portfolio" className="hover:text-yellow-400 transition">Portfolio</a></li>
-                </ul>
+
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="text-yellow-400 text-xl mt-1">
+                  <FaMapMarkerAlt />
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold mb-1">Location</h4>
+                  <p className="text-gray-400">Lahore, Pakistan</p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-yellow-400 font-semibold mb-3">Connect</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><a href="mailto:saadullahsaleem7@gmail.com" className="hover:text-yellow-400 transition">Email</a></li>
-                  <li><a href="#" className="hover:text-yellow-400 transition">LinkedIn</a></li>
-                  <li><a href="tel:+923104321784" className="hover:text-yellow-400 transition">Phone</a></li>
-                </ul>
+
+              <div className="flex items-start space-x-4">
+                <div className="text-yellow-400 text-xl mt-1">
+                  <FaEnvelope />
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold mb-1">Email</h4>
+                  <a href="mailto:saadullahsaleem7@gmail.com" className="text-gray-400 hover:text-yellow-400 transition">
+                    saadullahsaleem7@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="text-yellow-400 text-xl mt-1">
+                  <FaPhone />
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold mb-1">Phone</h4>
+                  <a href="tel:+923104321784" className="text-gray-400 hover:text-yellow-400 transition">
+                    +92 310 4321784
+                  </a>
+                </div>
               </div>
             </div>
+
+            <div className="pt-6">
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Available for freelance opportunities and full-time positions.
+              </p>
+              <p className="text-gray-400 text-sm leading-relaxed mt-2">
+                Response time: Usually within 24 hours.
+              </p>
+              <p className="text-gray-400 text-sm leading-relaxed mt-2">
+                Let's create something extraordinary together.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Side - Contact Form */}
+          <div className="bg-[#1a1a1a] border border-gray-800 rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-white mb-6">Send Message</h3>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-white font-medium mb-2">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-[#0a0a0a] border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-500 focus:outline-none transition"
+                  placeholder="Your full name"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-white font-medium mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-[#0a0a0a] border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-500 focus:outline-none transition"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="subject" className="block text-white font-medium mb-2">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-[#0a0a0a] border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-500 focus:outline-none transition"
+                  placeholder="Project discussion"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-white font-medium mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={5}
+                  className="w-full px-4 py-3 bg-[#0a0a0a] border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-500 focus:outline-none transition resize-none"
+                  placeholder="Tell me about your project..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-lg transition transform hover:scale-105"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import Projects from './components/Projects'
 import Experience from './components/Experience'
 import CTA from './components/CTA'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import BottomNav from './components/BottomNav'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Experience />
       <CTA />
       <Contact />
+      <Footer />
       <BottomNav activeSection={activeSection} setActiveSection={setActiveSection} />
     </div>
   )
