@@ -6,22 +6,17 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: FaLinkedin,
-      href: '#',
+      href: 'https://www.linkedin.com/in/muhammad-sohaib-shakeel-b67123324/',
       label: 'LinkedIn'
     },
     {
       icon: FaGithub,
-      href: '#',
+      href: 'https://github.com/sohaibs-liberary',
       label: 'GitHub'
     },
     {
-      icon: FaTwitter,
-      href: '#',
-      label: 'Twitter'
-    },
-    {
       icon: FaWhatsapp,
-      href: '#',
+      href: 'https://wa.me/923095797540',
       label: 'WhatsApp'
     }
   ]
@@ -32,10 +27,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-2">
-            <div className="text-yellow-400 text-3xl font-bold mb-4">SS</div>
+            <div className="text-yellow-400 text-3xl font-bold mb-4">Sohaib </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Building intelligent systems that drive results. Passionate about creating 
-              innovative web solutions that make a difference.
+              I build high-performance, type-safe applications with Next.js and TypeScript. 
+              I turn complex data flow challenges into seamless user experiences, delivering 
+              90+ Lighthouse scores and production-ready, stable code.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, idx) => {
@@ -71,16 +67,16 @@ const Footer = () => {
             <h4 className="text-yellow-400 font-semibold mb-4">Get in Touch</h4>
             <ul className="space-y-3 text-gray-400">
               <li>
-                <a href="mailto:saadullahsaleem7@gmail.com" className="hover:text-yellow-400 transition-colors">
-                  saadullahsaleem7@gmail.com
+                <a href="mailto:sachinsaleem7860@gmail.com" className="hover:text-yellow-400 transition-colors">
+                 muhammadsohaibshakeel18@gmail.com
                 </a>
               </li>
               <li>
                 <a href="tel:+923104321784" className="hover:text-yellow-400 transition-colors">
-                  +92 310 4321784
+                  +92 309 5797540
                 </a>
               </li>
-              <li className="text-gray-500">Lahore, Pakistan</li>
+              <li className="text-gray-500">Taxila , Pakistan</li>
             </ul>
           </div>
         </div>
@@ -89,7 +85,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-              © {currentYear} Saadullah Saleem. All rights reserved.
+              © {currentYear} Sohaib Shakeel . All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm text-gray-500">
               <a href="#" className="hover:text-yellow-400 transition-colors">Privacy Policy</a>
