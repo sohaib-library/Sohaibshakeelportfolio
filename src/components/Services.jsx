@@ -1,42 +1,42 @@
-import { FaRobot, FaServer, FaComments, FaBolt, FaDatabase, FaCloud } from 'react-icons/fa'
+import { FaReact, FaServer, FaMobile, FaBolt, FaDatabase, FaCloud } from 'react-icons/fa'
 
 const Services = () => {
   const services = [
     {
-      icon: FaRobot,
-      title: 'Agentic AI & LLMs',
+      icon: FaReact,
+      title: 'Frontend Development',
       description:
-        'Building intelligent multi-agent systems, conversational AI, and LLM-powered applications using LangChain, OpenAI, and custom frameworks.',
+        'Building modern, responsive web applications using React, Next.js, TypeScript, and Tailwind CSS with 90+ Lighthouse performance scores.',
     },
     {
       icon: FaServer,
-      title: 'Backend Development',
+      title: 'Full-Stack Development',
       description:
-        'Creating robust RESTful APIs and scalable backend systems using Python, Django, FastAPI with optimized database architectures.',
+        'Creating end-to-end applications with MERN stack, Next.js App Router, and serverless solutions like Convex with complete type safety.',
     },
     {
-      icon: FaComments,
-      title: 'Voice & WhatsApp Agents',
+      icon: FaMobile,
+      title: 'Responsive Design',
       description:
-        'Designing conversational AI assistants for voice calls and WhatsApp using Resell.ai, Twilio, and advanced NLP models.',
+        'Crafting mobile-first, pixel-perfect interfaces using Tailwind CSS and Shadcn UI that work seamlessly across all devices.',
     },
     {
       icon: FaBolt,
-      title: 'Workflow Automation',
+      title: 'Performance Optimization',
       description:
-        'Streamlining business operations with RPA, Zapier, and GoRight.io integrations that reduce manual work and boost efficiency.',
+        'Implementing advanced caching with TanStack Query, code-splitting, and Next.js optimizations for lightning-fast user experiences.',
     },
     {
       icon: FaDatabase,
-      title: 'Vector Databases & RAG',
+      title: 'API Integration & State Management',
       description:
-        'Implementing semantic search and retrieval systems using PGVector, Pinecone, and custom RAG architectures for intelligent data access.',
+        'Building robust data layers with Redux, TanStack Query, and RESTful API integrations with proper error handling and validation.',
     },
     {
       icon: FaCloud,
-      title: 'Cloud & DevOps',
+      title: 'DevOps & Deployment',
       description:
-        'Deploying and scaling applications on GCP with Kubernetes, Docker, and CI/CD pipelines for production-ready solutions.',
+        'Containerizing applications with Docker, implementing CI/CD pipelines, and deploying production-ready solutions with optimized builds.',
     },
   ]
 
@@ -65,7 +65,7 @@ const Services = () => {
             Full-Stack AI & Automation Solutions
           </h2> */}
           <p className="text-gray-400 text-lg">
-            Delivering scalable, intelligent solutions across the entire technology stack
+            Delivering modern, scalable web solutions with cutting-edge technologies and best practices
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
