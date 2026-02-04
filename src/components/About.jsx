@@ -3,9 +3,11 @@ import profileImg from '../assets/profile-new.png'
 
 const About = () => {
   const handleDownloadCV = () => {
-    // Placeholder for CV download functionality
-    // You can add actual CV file link here
-    window.open('#', '_blank')
+    // Create a link to download CV
+    const link = document.createElement('a')
+    link.href = '/Black Modern Professional Resume (2).pdf' // You'll need to add your CV to the public folder
+    link.download = 'Muhammad_Sohaib_Shakeel_CV.pdf'
+    link.click()
   }
 
   return (
@@ -59,26 +61,26 @@ const About = () => {
               {/* Paragraphs */}
               <div className="space-y-3 sm:space-y-4 text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
                 <p>
-                  I'm <strong className="text-yellow-500">Saadullah Bin Saleem</strong>, an AI Engineer and Backend Developer passionate about creating intelligent systems and automation solutions. My journey in tech started with curiosity and self-learning, and I've built a philosophy around coding that emphasizes clean architecture, scalability, and real-world impact.
+                  I am a <strong className="text-yellow-500">web developer with 6 months of experience</strong> in React, Next.js, Laravel, WordPress, and Shopify. I successfully led a React project and gained hands-on experience in Shopify development and deployment. I specialize in creating scalable, user-friendly solutions with strong UI/UX and SEO strategies.
                 </p>
                 <p>
-                  I specialize in <strong className="text-yellow-500">Agentic AI, Gen AI tools</strong>, and backend architectures using <strong className="text-yellow-500">Python, Django, and FastAPI</strong>. Currently focused on building smart, scalable solutions that automate workflows, power voice agents, and enhance real-world efficiency. My key strengths include problem-solving, continuous learning, and delivering production-ready solutions.
+                  My expertise includes <strong className="text-yellow-500">E-commerce, Landing Pages, and Responsive Website</strong> development using modern technologies like <strong className="text-yellow-500">HTML, CSS, JavaScript, Tailwind CSS, React.js, and Next.js</strong>. I focus on delivering professional UI components and scalable web solutions with strong problem-solving and teamwork skills.
                 </p>
               </div>
 
               {/* Statistics Section */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-6 sm:gap-8 md:gap-12 pt-2 sm:pt-4">
                 <div className="flex flex-col items-center lg:items-start">
+                  <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-500">6+</span>
+                  <span className="text-xs sm:text-sm text-gray-400 uppercase tracking-wide mt-1 text-center lg:text-left">Months Experience</span>
+                </div>
+                <div className="flex flex-col items-center lg:items-start">
                   <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-500">3+</span>
-                  <span className="text-xs sm:text-sm text-gray-400 uppercase tracking-wide mt-1 text-center lg:text-left">Years of Experience</span>
+                  <span className="text-xs sm:text-sm text-gray-400 uppercase tracking-wide mt-1 text-center lg:text-left">Projects Completed</span>
                 </div>
                 <div className="flex flex-col items-center lg:items-start">
-                  <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-500">20+</span>
-                  <span className="text-xs sm:text-sm text-gray-400 uppercase tracking-wide mt-1 text-center lg:text-left">Project Completed</span>
-                </div>
-                <div className="flex flex-col items-center lg:items-start">
-                  <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-500">10+</span>
-                  <span className="text-xs sm:text-sm text-gray-400 uppercase tracking-wide mt-1 text-center lg:text-left">Satisfied Clients</span>
+                  <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-500">2</span>
+                  <span className="text-xs sm:text-sm text-gray-400 uppercase tracking-wide mt-1 text-center lg:text-left">Companies Worked</span>
                 </div>
               </div>
 

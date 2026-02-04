@@ -3,36 +3,25 @@ import { FaBriefcase } from 'react-icons/fa'
 const Experience = () => {
   const experiences = [
     {
-      role: 'AI Engineer',
-      company: 'Blacklake',
-      duration: '2023 - Present',
-      responsibilities: 'Leading creation of intelligent automation systems and multi-agent architectures for real estate. Building scalable AI solutions that enhance property search and workflow automation.',
+      role: 'Frontend Developer',
+      company: 'CognitoJS Pvt Ltd',
+      duration: '4 Nov 2025 - Present',
+      responsibilities: 'Leading React projects and building interactive, professional UI components using React, Next.js, and TailwindCSS. Implementing Shopify website setup and customization while gaining hands-on experience with deployment, server permissions, and theme customization.',
       achievements: [
-        'Boosted workflow efficiency by 80% through AI-driven property search models',
-        'Designed and implemented multi-agent architecture reducing processing time by 60%',
-        'Led team of 3 developers in building production-ready AI systems'
+        'Led a React Project: Independently handled and successfully delivered a complete React project',
+        'Built interactive and professional UI components using React, Next.js, and TailwindCSS',
+        'Enhanced skills in project ownership, teamwork, and delivering scalable web solutions'
       ]
     },
     {
-      role: 'AI Engineer',
-      company: 'AITechWorks',
-      duration: '2022 - 2023',
-      responsibilities: 'Driving development of advanced voice agents and automation workflows. Creating intelligent conversational AI systems for client engagement and appointment scheduling.',
+      role: 'Frontend Developer (Internship)',
+      company: 'Ejlaal Software',
+      duration: '10 Sep - 2 Nov 2025',
+      responsibilities: 'Completed a two-month internship gaining hands-on experience in modern web development. Worked on frontend projects using technologies like HTML, CSS, JavaScript, TailwindCSS, React.js, and Next.js.',
       achievements: [
-        'Enhanced client engagement and appointment scheduling by 50%',
-        'Built voice agent system handling 1000+ daily interactions',
-        'Implemented NLP models with 95% accuracy for intent recognition'
-      ]
-    },
-    {
-      role: 'Backend Developer',
-      company: 'Soliq Solutions',
-      duration: '2021 - 2022',
-      responsibilities: 'Engineered RESTful APIs and backend systems in Django for production applications. Optimized database queries and implemented caching strategies for improved performance.',
-      achievements: [
-        'Reduced API response latency by 30% through optimized architecture',
-        'Developed scalable backend handling 10K+ requests per minute',
-        'Implemented automated testing reducing bugs by 40%'
+        'Strengthened problem-solving and teamwork skills through collaborative development',
+        'Improved understanding of real-world software development workflows',
+        'Gained practical experience with modern frontend technologies and best practices'
       ]
     }
   ]
@@ -79,7 +68,7 @@ const Experience = () => {
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            My professional journey in AI engineering and backend development and the impact I've made
+            My professional journey in web development and the impact I've made
           </p>
         </div>
 
