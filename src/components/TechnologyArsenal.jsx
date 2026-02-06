@@ -15,58 +15,23 @@ import { TbBrandNextjs, TbApi } from 'react-icons/tb'
 const TechnologyArsenal = () => {
   const [activeTab, setActiveTab] = useState('All')
 
-  // Data Structure
+  // Data Structure - Frontend Development Only
   const allSkills = [
-    // Backend
-    { name: 'Python', icon: FaPython, category: 'Backend' },
-    { name: 'FastAPI', icon: SiFastapi, category: 'Backend' },
-    { name: 'OpenAI', icon: SiOpenai, category: 'Backend' },
-    { name: 'Node.js', icon: FaNodeJs, category: 'Backend' },
-    { name: 'Django', icon: SiDjango, category: 'Backend' },
-    { name: 'LangChain', icon: FaCode, category: 'Backend' }, // Fallback
-    { name: 'Anthropic', icon: SiAnthropic, category: 'Backend' },
-    { name: 'Express', icon: SiExpress, category: 'Backend' },
-
-    // Database & Cloud
-    { name: 'PostgreSQL', icon: SiPostgresql, category: 'Tools' },
-    { name: 'Redis', icon: SiRedis, category: 'Tools' },
-    { name: 'MSSQL', icon: FaDatabase, category: 'Tools' },
-    { name: 'Kubernetes', icon: SiKubernetes, category: 'Tools' },
-    { name: 'AWS', icon: FaAws, category: 'Tools' },
-    { name: 'MongoDB', icon: SiMongodb, category: 'Tools' },
-    { name: 'Firebase', icon: SiFirebase, category: 'Tools' },
-    { name: 'Docker', icon: FaDocker, category: 'Tools' },
-    { name: 'GCP', icon: SiGooglecloud, category: 'Tools' },
-
-    // Frontend
+    // Core Frontend
     { name: 'React', icon: FaReact, category: 'Frontend' },
-    { name: 'TypeScript', icon: SiTypescript, category: 'Frontend' },
     { name: 'JavaScript', icon: SiJavascript, category: 'Frontend' },
+    { name: 'TypeScript', icon: SiTypescript, category: 'Frontend' },
     { name: 'Next.js', icon: SiNextdotjs, category: 'Frontend' },
-    { name: 'Tailwind', icon: SiTailwindcss, category: 'Frontend' },
-
-    // No-Code & Voice (Grouped into Tools for simplicity in tabs, or can be separate)
-    // User requested: All, Frontend, Backend, Tools. I'll put rest in Tools.
-    { name: 'N8N', icon: SiN8N, category: 'Tools' },
-    { name: 'GoHighLevel', icon: FaTools, category: 'Tools' },
-    { name: 'Zapier', icon: SiZapier, category: 'Tools' },
-    { name: 'Make', icon: FaCode, category: 'Tools' }, // Fallback
-    { name: 'Webflow', icon: SiWebflow, category: 'Tools' },
-    { name: 'Meltano', icon: FaTools, category: 'Tools' },
-    { name: 'BardAI', icon: FaRobot, category: 'Tools' },
-    { name: 'Bubble', icon: FaCode, category: 'Tools' },
-    { name: 'Airtable', icon: SiAirtable, category: 'Tools' },
     
-    // Voice
-    { name: 'Twilio', icon: SiTwilio, category: 'Tools' },
-    { name: 'Telegram', icon: FaTelegram, category: 'Tools' },
-    { name: 'ElevenLabs', icon: FaMobileAlt, category: 'Tools' },
-    { name: 'Whatsapp', icon: FaWhatsapp, category: 'Tools' },
-    { name: 'Azure Speech', icon: FaMicrosoft, category: 'Tools' },
-    { name: 'Deepgram', icon: TbApi, category: 'Tools' },
+    // Styling
+    { name: 'Tailwind', icon: SiTailwindcss, category: 'Styling' },
+    
+    // Tools & Services
+    { name: 'Firebase', icon: SiFirebase, category: 'Tools' },
+    { name: 'Webflow', icon: SiWebflow, category: 'Tools' },
   ]
 
-  const tabs = ['All', 'Frontend', 'Backend', 'Tools']
+  const tabs = ['All', 'Frontend', 'Styling', 'Tools']
 
   const filteredSkills = activeTab === 'All' 
     ? allSkills 
